@@ -13,7 +13,9 @@ import java.util.Scanner;
 public class SimpleJava {
 
     public static void main(String[] args) {
-        readDouble("Eingabe erwartet");
+
+
+
     }
 
     private static Scanner input = new Scanner(System.in);
