@@ -6,6 +6,10 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * @author Lukas Jonsson
+ */
+
 public class SimpleJava {
 
     public static void main(String[] args) {
@@ -15,11 +19,11 @@ public class SimpleJava {
     private static Scanner input = new Scanner(System.in);
 
     private static String readInput(String message) {
-        printLine(message);
+        writeConsole(message);
         while(input.hasNextLine()){
             String value = input.nextLine();
             if(value == null){
-                printLine("Eingabe konnte nicht gelesen werden. Bitte erneut versuchen!");
+                writeConsole("Eingabe konnte nicht gelesen werden. Bitte erneut versuchen!");
                 return readInput(message);
             }
             return value;
@@ -40,7 +44,7 @@ public class SimpleJava {
             return Integer.valueOf(readInput(message));
         }
         catch (NumberFormatException e){
-            printLine("Bitte geben sie eine Zahl ein: ");
+            writeConsole("Bitte geben sie eine Zahl ein: ");
             return readInt(message);
         }
     }
@@ -60,19 +64,23 @@ public class SimpleJava {
             return number.doubleValue();
         }
         catch (NumberFormatException e){
-            printLine("Bitte geben sie eine Zahl ein: ");
+            writeConsole("Bitte geben sie eine Zahl ein: ");
             return readInt(message);
         } catch (ParseException e) {
-            printLine("Bitte geben sie eine Zahl ein: ");
+            writeConsole("Bitte geben sie eine Zahl ein: ");
             return readInt(message);
         }
     }
 
-    public static void printLine(String messageToPrint){
+    public static void writeConsole(String messageToPrint){
         System.out.println(messageToPrint);
     }
 
-    public static void print(String messageToPrint){
+    public static void writeNewLine(){
+        System.out.println("");
+    }
+
+    public static void write(String messageToPrint){
         System.out.print(messageToPrint);
     }
 
