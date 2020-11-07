@@ -1,9 +1,6 @@
 package de.verdox.simplejava.lektionen;
 
 public class Kapitel1 {
-
-    private static boolean logischer_ausdruck = true;
-
     public static void main(String[] args) {
 
         // Wichtige Datentypen
@@ -15,7 +12,11 @@ public class Kapitel1 {
         boolean wahrheitswert = false;           //Wahrheitswert für logische Auswertungen
 
         int variable = 1; // <-- Erstellung
+        System.out.println("Die Variable 'variable' wird erstellt und mit "+variable+" belegt");
+
         variable = 2; // <-- Belegen wir nur den Wert
+
+        System.out.println("Die Variable 'variable' wird mit "+variable+" belegt");
 
         // Wichtige Syntax zum vergleichen von Variablen
         // Diese Ausdrücke liefern einen boolean Wert, also true oder false!
@@ -34,6 +35,11 @@ public class Kapitel1 {
         // Logische Operatoren
         // Operator: !
 
+        System.out.println("Haus1IstRot = "+haus1IstRot);
+        System.out.println("Haus2IstRot = "+haus2IstRot);
+
+        System.out.println("!haus1IstRot = "+!haus1IstRot);
+
         boolean testvariable = false;
         if(!testvariable == true)
         {
@@ -51,48 +57,44 @@ public class Kapitel1 {
             // Bei & müssen beide true sein.
         }
 
+        System.out.println("(Haus1IstRot && Haus2IstRot) = "+(haus1IstRot&&haus2IstRot));
+
         // Operator: | / ||
 
-        boolean c = false, d = true;
-
-        if(c || d)
+        if(haus1IstRot || haus2IstRot)
         {
             // Ausdruck ist true, wenn beide Werte true sind.
             // Bei || wird vorzeitig true ausgegeben, wenn a true ist
             // Bei |
         }
 
+        System.out.println("(Haus1IstRot || Haus2IstRot) = "+(haus1IstRot||haus2IstRot));
+
         // Operator: ^
-        boolean a = true;
-        boolean b = false;
         if(haus1IstRot^haus2IstRot)
         {
             // Dieser Ausdruck ist true, weil a und b unterschiedliche boolean Werte haben
         }
 
+        System.out.println("(Haus1IstRot ^ Haus2IstRot) = "+(haus1IstRot^haus2IstRot));
+
         // While Schleife
 
-        while(haus1IstRot){
-
-        }
-
-        while(logischer_ausdruck){
+        //while(logischer_ausdruck){
             // Irgendwas wird getan, während der in der while Schleife deklarierte logische Ausdruck == true ist.
-        }
+       //}
 
         // Kombinieren wir mal was wir gelernt haben
 
-        int number1 = 10;
-        int number2 = 0;
+        int number1 = 0;
+        int counter = 0;
 
-        while(number1 < 20){
+        System.out.println("Start der Whileschleife mit number1 = 10");
+
+        while(counter < 10){
+            counter++;
+            System.out.println("Durchlauf "+counter+": [number1 = "+number1+"]");
             number1++;
-            break;
-        }
-
-        while(number1 > 0 && !(number2 <= 10)){
-            number1--;
-            number2++;
         }
 
         // Die einzelnen Ausdrücke im Kopf der Whileschleife liefern jeweils true oder false. Am Ende wertet der logische
