@@ -99,5 +99,7 @@ public class Kapitel1 {
 
         // Die einzelnen Ausdrücke im Kopf der Whileschleife liefern jeweils true oder false. Am Ende wertet der logische
         // Operator das Endergebnis der Anweisung aus. while(anweisung1 && anweisung2) -> liefert true oder false
+
+
     }
 }
