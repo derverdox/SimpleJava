@@ -9,7 +9,7 @@ public class Kapitel1 {
         double comma_number = 1.5;              //Für Zahlen mit Nachkommastellen
         String name = "Peter";                  //Für Wörter, Sätze etc (Aneinanderreihung von chars)
         char character = 'a';                   //Für einzelne Zeichen
-        boolean wahrheitswert = false;           //Wahrheitswert für logische Auswertungen
+        boolean wahrheitswert = false;          //Wahrheitswert für logische Auswertungen
 
         int variable = 1; // <-- Erstellung
         System.out.println("Die Variable 'variable' wird erstellt und mit "+variable+" belegt");
@@ -28,10 +28,19 @@ public class Kapitel1 {
         // Gleichheit:       variable1 == variable2           -> True wenn variable1 gleich variable2
         // Ungleichheit:     variable1 != variable2           -> True wenn variable1 ungleich variable2
 
+        int zahl1 = 10;
+        int zahl2 = 20;
+
+        if(zahl1 != zahl2){
+            System.out.println("zahl1 ist kleiner als zahl2");
+        }
+
         // ACHTUNG! NICHT: variable1 = variable2 <-- Dies ist eine Deklaration. variable1 erhält den Wert von variable2
 
         boolean haus1IstRot = true;
+
         boolean haus2IstRot = false;
+
         // Logische Operatoren
         // Operator: !
 
@@ -86,20 +95,15 @@ public class Kapitel1 {
 
         // Kombinieren wir mal was wir gelernt haben
 
-        int number1 = 0;
         int counter = 0;
 
         System.out.println("Start der Whileschleife mit number1 = 10");
 
         while(counter < 10){
             counter++;
-            System.out.println("Durchlauf "+counter+": [number1 = "+number1+"]");
-            number1++;
         }
 
         // Die einzelnen Ausdrücke im Kopf der Whileschleife liefern jeweils true oder false. Am Ende wertet der logische
         // Operator das Endergebnis der Anweisung aus. while(anweisung1 && anweisung2) -> liefert true oder false
-
-
     }
 }
