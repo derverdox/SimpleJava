@@ -41,20 +41,32 @@ public class Kapitel3 {
 
        //// 3. Methoden
 
-        test1();
-        System.out.println(test2(10,2));
-        System.out.println(test2(4,2));
-
-        int number; // = some int
+        int ergebnisDerMethode = test2(10,5);
     }
 
     public static void test1(){
-        System.out.println("Test");
+
+        
+
     }
 
+
     public static int test2(int zahl1, int zahl2){
+
+        System.out.println("Rechnung wird ausgeführt");
         int number = zahl1 / zahl2;
         return number;
+    }
+
+    public static void test(){
+
+        int inputNumber = 1221;
+        System.out.println("Input Number: "+inputNumber);
+
+        while (inputNumber > 0) {
+            System.out.println(inputNumber % 10);
+            inputNumber /= 10;
+        }
     }
 
 }
